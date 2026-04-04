@@ -42,13 +42,13 @@ func (e *Eye) Draw(canvas *Canvas, rect BoundingRect, ctx *DrawContext) {
 	if openRatio > 0 {
 		canvas.FillCircle(x+offsetX, y+offsetY, e.r, primaryColor)
 
-		if exp == ExpressionAngry || exp == ExpressionSad {
+		if exp == EyeShapeInnerSlant || exp == EyeShapeOuterSlant {
 			x0 := x + offsetX - e.r
 			y0 := y + offsetY - e.r
 			x1 := x0 + e.r*2
 			y1 := y0
 			var x2 int16
-			if (!e.isLeft) != (exp == ExpressionSad) {
+			if (!e.isLeft) != (exp == EyeShapeOuterSlant) {
 				x2 = x0
 			} else {
 				x2 = x1
@@ -57,12 +57,12 @@ func (e *Eye) Draw(canvas *Canvas, rect BoundingRect, ctx *DrawContext) {
 			canvas.FillTriangle(x0, y0, x1, y1, x2, y2, backgroundColor)
 		}
 
-		if exp == ExpressionHappy || exp == ExpressionSleepy {
+		if exp == EyeShapeHalfOpen || exp == EyeShapeHalfClosed {
 			x0 := x + offsetX - e.r
 			y0 := y + offsetY - e.r
 			w := e.r*2 + 4
 			h := e.r + 2
-			if exp == ExpressionHappy {
+			if exp == EyeShapeHalfOpen {
 				y0 += e.r
 				canvas.FillCircle(x+offsetX, y+offsetY, e.r*2/3, backgroundColor)
 			}

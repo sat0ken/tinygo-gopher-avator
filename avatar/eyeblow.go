@@ -28,9 +28,9 @@ func (eb *Eyeblow) Draw(canvas *Canvas, rect BoundingRect, ctx *DrawContext) {
 		primaryColor = ctx.GetColorPalette().Get(ColorPrimary)
 	}
 
-	if exp == ExpressionAngry || exp == ExpressionSad {
+	if exp == EyeShapeInnerSlant || exp == EyeShapeOuterSlant {
 		var a int16
-		if eb.isLeft != (exp == ExpressionSad) {
+		if eb.isLeft != (exp == EyeShapeOuterSlant) {
 			a = -1
 		} else {
 			a = 1
@@ -51,7 +51,7 @@ func (eb *Eyeblow) Draw(canvas *Canvas, rect BoundingRect, ctx *DrawContext) {
 	} else {
 		x1 := x - eb.width/2
 		y1 := y - eb.height/2
-		if exp == ExpressionHappy {
+		if exp == EyeShapeHalfOpen {
 			y1 -= 5
 		}
 		canvas.FillRect(x1, y1, eb.width, eb.height, primaryColor)

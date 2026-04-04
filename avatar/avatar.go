@@ -46,7 +46,7 @@ func NewAvatarWithFace(face FaceDrawer) *Avatar {
 	return &Avatar{
 		face:              face,
 		isDrawing:         false,
-		expression:        ExpressionNeutral,
+		expression:        EyeShapeNormal,
 		breath:            0,
 		rightEyeOpenRatio: 1.0,
 		rightGazeV:        0,

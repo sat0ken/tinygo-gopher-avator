@@ -62,15 +62,15 @@ func (e *Effect) Draw(canvas *Canvas, rect BoundingRect, ctx *DrawContext) {
 	exp := ctx.GetExpression()
 
 	switch exp {
-	case ExpressionDoubt:
+	case EyeShapeNormal:
 		e.drawSweatMark(canvas, 290, 110, 7, primaryColor, -offset)
-	case ExpressionAngry:
+	case EyeShapeInnerSlant:
 		e.drawAngerMark(canvas, 280, 50, 12, primaryColor, bgColor, offset)
-	case ExpressionHappy:
+	case EyeShapeHalfOpen:
 		e.drawHeartMark(canvas, 280, 50, 12, primaryColor, offset)
-	case ExpressionSad:
+	case EyeShapeOuterSlant:
 		e.drawChillMark(canvas, 270, 0, 30, primaryColor, offset)
-	case ExpressionSleepy:
+	case EyeShapeHalfClosed:
 		e.drawBubbleMark(canvas, 290, 40, 10, primaryColor, offset)
 		e.drawBubbleMark(canvas, 270, 52, 6, primaryColor, -offset)
 	}

@@ -66,12 +66,12 @@ func main() {
 
 	// Change expressions every 3 seconds
 	expressions := []avatar.Expression{
-		avatar.ExpressionNeutral,
-		avatar.ExpressionHappy,
-		avatar.ExpressionSad,
-		avatar.ExpressionAngry,
-		avatar.ExpressionDoubt,
-		avatar.ExpressionSleepy,
+		avatar.EyeShapeNormal,
+		avatar.EyeShapeHalfOpen,
+		avatar.EyeShapeOuterSlant,
+		avatar.EyeShapeInnerSlant,
+		avatar.EyeShapeNormal,
+		avatar.EyeShapeHalfClosed,
 	}
 
 	i := 0
