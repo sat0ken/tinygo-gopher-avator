@@ -12,3 +12,8 @@ M5Stackを用意して以下のコマンドで書き込みます
 $ tinygo flash --target m5stack examples/basics/main.go
 ```
 
+TN液晶のM5Stackの場合は以下のコマンドで書き込みます
+
+```
+$ tinygo flash -target m5stack -tags tn ./examples/basics/main.gp
+```
