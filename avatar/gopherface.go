@@ -19,10 +19,6 @@ const (
 	eyeCanvasW       = int16(88)
 )
 
-const eyeWhiteRGB565  = uint16(0x0000) // INVON: 0x0000 → displays as white
-const pupilRGB565     = uint16(0xFFFF) // INVON: 0xFFFF → displays as black
-const highlightRGB565 = uint16(0x0000) // INVON: 0x0000 → displays as white (highlight dot)
-
 func NewGopherFace(display Displayer) *GopherFace {
 	return &GopherFace{
 		boundingRect: NewBoundingRectSize(0, 0, GopherBitmapWidth, GopherBitmapHeight),

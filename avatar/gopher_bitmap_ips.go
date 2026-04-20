@@ -1,3 +1,5 @@
+//go:build !tn
+
 package avatar
 
 const GopherBitmapWidth  = 320

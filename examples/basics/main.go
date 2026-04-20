@@ -52,7 +52,7 @@ func main() {
 	display.Configure(ili9341.Config{
 		Width:            320,
 		Height:           240,
-		DisplayInversion: true,
+		DisplayInversion: displayInversion,
 	})
 	backlight.High()
 	display.SetRotation(ili9341.Rotation0Mirror)
